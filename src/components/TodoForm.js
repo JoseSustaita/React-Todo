@@ -10,15 +10,15 @@ class TodoForm extends React.Component {
     };
   }
 
-  handleChanges = (event) => {
+  handleChanges = (e) => {
     //update state with each keystroke
     this.setState({
-      TodoItem: event.target.value,
+      TodoItem: e.target.value,
     });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
     this.props.addTodo(this.state.TodoItem);
     this.setState({ TodoItem: [""] });
   };

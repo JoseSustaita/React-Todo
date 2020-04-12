@@ -23,7 +23,7 @@ class App extends React.Component {
       todosList: todos,
     };
   }
-
+  //Toggling the todos
   toggleTodo = (id) => {
     const moreThingsToDo = this.state.todosList.map((todo) => {
       if (todo.id === id) {
